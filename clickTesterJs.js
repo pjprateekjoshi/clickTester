@@ -1,18 +1,16 @@
 const size = 20;
-var ctx;
-var x1 = 50, y1 = 50;
 var boundary = 25;
 var timerValueInSeconds = 15;
 const canvasX = 1300;
 const canvasY = 800;
 
+var score = 0;
+var x1 = 50, y1 = 50;
 var timerValue = (timerValueInSeconds + 1) * 1000; //(+1) seconds time to adjust for visibility to user
 var firstClick = true;
 var gameSessionTillTime;
-
-var score = 0;
-
 var endXRandomizer = canvasX - (2*boundary), endYRandomizer = canvasY - (2*boundary);
+var ctx;
 var randomNumber;
 
 
