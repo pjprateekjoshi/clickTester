@@ -2,14 +2,17 @@ const size = 20;
 var ctx;
 var x1 = 50, y1 = 50;
 var boundary = 25;
+var timerValueInSeconds = 15;
+const canvasX = 1300;
+const canvasY = 800;
 
-var timerValue = 16000; //15 (+1) seconds time
+var timerValue = (timerValueInSeconds + 1) * 1000; //(+1) seconds time to adjust for visibility to user
 var firstClick = true;
 var gameSessionTillTime;
 
 var score = 0;
 
-var endXRandomizer = 1300 - (2*boundary), endYRandomizer = 800 - (2*boundary);
+var endXRandomizer = canvasX - (2*boundary), endYRandomizer = canvasY - (2*boundary);
 var randomNumber;
 
 
@@ -78,6 +81,7 @@ function startTimerNow(){
           clearInterval(x);
           console.log("Final Score: " + score);
           document.getElementById("timer").innerHTML = "clickTester Completed. Score: " + score + ". Click on the small box to start playing again.";
+          document.getElementById("scoreCounter").innerHTML += " " + score;
           score = 0;
           firstClick = true;
         }
