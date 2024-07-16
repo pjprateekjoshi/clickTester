@@ -48,7 +48,7 @@ function createNewRectangleIngame(){
     randomNumber = Math.random();
     y1 = (randomNumber * endYRandomizer) + boundary;    
     ctx = canvas.getContext("2d");
-    ctx.clearRect(0,0,1300,800);
+    ctx.clearRect(0,0,canvasX,canvasY);
     drawRectangle(x1, y1);
 }
 
